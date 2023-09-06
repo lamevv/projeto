@@ -1,6 +1,6 @@
 # Projeto `<Título do Projeto>`
 
-# Equipe `<nome da equipe>`
+# Equipe `LAMEV`
 * `<nome completo>` - `<RA>`
 * `<nome completo>` - `<RA>`
 * `<nome completo>` - `<RA>`
