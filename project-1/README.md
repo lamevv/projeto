@@ -12,8 +12,8 @@
 
 título da base | link | breve descrição
 ----- | ----- | -----
-`FooDB` | <a href='https://foodb.ca'>`https://foodb.ca`</a> | `<breve descrição da base>`
-`CulinaryDB` | <a href='https://cosylab.iiitd.edu.in/culinarydb/'>`https://cosylab.iiitd.edu.in/culinarydb`</a> | `<breve descrição da base>`
+`FooDB` | <a href='https://foodb.ca'>`https://foodb.ca`</a> | `Descrição nutricional (macro e micronutrientes) dos ingredientes`
+`CulinaryDB` | <a href='https://cosylab.iiitd.edu.in/culinarydb/'>`https://cosylab.iiitd.edu.in/culinarydb`</a> | `Receitas populares (com ingredientes e suas quantidades) de acordo com suas regiões`
 
 ## Modelo Conceitual
 
