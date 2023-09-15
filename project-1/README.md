@@ -58,7 +58,6 @@ PERFIL_NUTRICIONAL_REGIÃO(_NomeRegião_, Calorias, Carboidratos, Gorduras, Prot
 
 ## Perguntas de Pesquisa/Análise
 
-> Liste aqui as perguntas de pesquisa/análise. Nem todas as perguntas precisam de implementação associada. É possível haver perguntas em que a solução é apenas descrita para demonstrar o potencial da base. Abaixo são ilustradas três perguntas, mas pode ser um número maior a critério da equipe.
 
 #### Pergunta/Análise 1
 > * Quais são os alimentos mais consumidos na população de uma dada região estudada?
