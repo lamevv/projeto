@@ -1,7 +1,7 @@
 # Modelo para Apresentação do Projeto 1 - Modelo Conceitual e Lógico
 
 ## Slides da Apresentação
-> <a href='<link-pdf>'>PDF Apresentação</a>
+> <a href='<https://github.com/lamevv/projeto/blob/main/project-1/projeto1-mc536.pdf>'>PDF Apresentação</a>
 
 ## Motivação e Contexto
 
