@@ -26,9 +26,34 @@ título da base | link | breve descrição
 
 > Exemplo de modelo lógico relacional
 ~~~
-PESSOA(_Código_, Nome, Telefone)
-ARMÁRIO(_Código_, Tamanho, Ocupante)
-  Ocupante chave estrangeira -> PESSOA(Código)
+NUTRIENTE(_Nome_, EhMacro)
+GRUPO_INGREDIENTE(_Id_, Nome)
+SUBGRUPO_INGREDIENTE(_Id_, Nome, IdGrupo)
+  IdGrupo: chave estrangeira para GRUPO_INGREDIENTE(Id)
+
+INGREDIENTE(_Id_, Nome, IdSubGrupo)
+  IdSubGrupo: chave estrangeira para SUBGRUPO_INGREDIENTE(Id)
+
+COMPOSICAO_INGREDIENTE(_NomeNutriente_, _IdIngrediente_, QuantidadeNutriente, CaloriasParciais)
+NomeNutriente: chave estrangeira para NUTRIENTE(Nome)
+  IdIngrediente: chave estrangeira para INGREDIENTE(Id)
+
+RECEITA(_Id_, Nome, Região)
+COMPOSICAO_RECEITA(_IdReceita_, _IdIngrediente_, NomeMedida, QuantidadeMedida)
+  IdReceita: chave estrangeira para RECEITA(Id)
+  IdIngrediente: chave estrangeira para INGREDIENTE(Id)
+
+CATEGORIA(_Nome_, Descricao)
+TIPO_RECEITA(_IdReceita_, _NomeCategoria_)
+  IdReceita: chave estrangeira para RECEITA(Id)
+  NomeCategoria: chave estrangeira para CATEGORIA(Nome)
+
+MEDIDAS(_Nome_, QuantidadePadrao)
+REGIAO(_Nome_)
+PERFIL_NUTRICIONAL_RECEITA(_IdReceita_, Calorias, Carboidratos, Gorduras, Proteinas)
+  IdReceita: chave estrangeira para RECEITA(Id)
+PERFIL_NUTRICIONAL_REGIÃO(_NomeRegião_, Calorias, Carboidratos, Gorduras, Proteinas)
+  NomeRegiao: chave estrangeira para REGIAO(Nome)
 ~~~
 
 ## Perguntas de Pesquisa/Análise
