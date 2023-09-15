@@ -88,6 +88,24 @@ PERFIL_NUTRICIONAL_REGIÃO(_NomeRegião_, Calorias, Carboidratos, Gorduras, Prot
 >   * Explicação em linhas gerais de como a base pode ser usada para responder esta pergunta e a sua relevância.
 
 #### Pergunta/Análise 3
-> * Pergunta 3
+> * 
 >   
->   * Explicação em linhas gerais de como a base pode ser usada para responder esta pergunta e a sua relevância.
+>
+### Pegunta/Análise 1
+
+> * Quais são os ingredientes comuns em receitas de regiões com altas taxas de longevidade?
+
+>  Podemos identificar os ingredientes das receitas populares das regiões filtradas através de dados auxiliares como: Expectativa de vida e Índice de Segurança Alimentar da região analisada. Assim, é possível investigar o padrão de consumo comum destas regiões, contribuindo assim para uma melhor compreensão da relação entre alimentação e longevidade.
+
+
+### Pergunta/Análise 2
+> * Existe uma correlação entre a taxa de obesidade e a falta de alimentos saudáveis nas receitas populares em uma região?
+
+> Através de informações de Taxa de obesidade, Consumo de Frutas e Vegetais, Consumo de Alimentos Processados podemos filtrar as regiões e investigar uma correlação entre esses fatores e a carência de alimentos saudáveis nas receitas populares das regiões. A relação identificada pode ser crucial para formar políticas de saúde, promover escolhas alimentares mais saudáveis e uma possível reflexão da influência dos padrões culturais de alimentação na saúde de uma dada população.
+
+### Pergunta/Análise 3
+> * Quais são as melhores receitas para pessoas com restrições alimentares para um determinado país?
+
+>   Fontes de proteínas para veganos/vegetarianos
+Receitas com baixo teor de gordura
+Fontes de cálcio para intolerantes à lactose
