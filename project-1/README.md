@@ -17,7 +17,7 @@ título da base | link | breve descrição
 
 ## Modelo Conceitual
 
-> ![ER Taxi](images/modeloconceitual.png)
+<img src='images/modeloconceitual.png' width="400px" height="auto">
 
 ## Modelos Lógicos
 
