@@ -17,8 +17,7 @@ título da base | link | breve descrição
 
 ## Modelo Conceitual
 
-> Coloque aqui a imagem do modelo conceitual em ER ou UML, como o exemplo a seguir:
-> ![ER Taxi](images/er-taxi.png)
+> ![ER Taxi](images/modeloconceitual.png)
 
 ## Modelos Lógicos
 
@@ -98,3 +97,8 @@ PERFIL_NUTRICIONAL_REGIÃO(_NomeRegião_, Calorias, Carboidratos, Gorduras, Prot
 >   * Fontes de proteínas para veganos/vegetarianos
 Receitas com baixo teor de gordura
 Fontes de cálcio para intolerantes à lactose
+
+### Pergunta/Análise 4
+> * Quais ingredientes regionais podem ser fontes de nutrientes essenciais?
+>
+>   * Verificar a existência de alimentos regionais que contenham grande quantidade de nutrientes essenciais, para alimentação melhor adaptada às necessidades locais.
