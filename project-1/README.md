@@ -61,51 +61,45 @@ PERFIL_NUTRICIONAL_REGIÃO(_NomeRegião_, Calorias, Carboidratos, Gorduras, Prot
 > Liste aqui as perguntas de pesquisa/análise. Nem todas as perguntas precisam de implementação associada. É possível haver perguntas em que a solução é apenas descrita para demonstrar o potencial da base. Abaixo são ilustradas três perguntas, mas pode ser um número maior a critério da equipe.
 
 #### Pergunta/Análise 1
-> * Pergunta 1
+> * Quais são os alimentos mais consumidos na população de uma dada região estudada?
 >   
->   * Explicação sucinta da análise que será feita.
+>   * Cruzando as informações das receitas mais populares de certo país através do CulinaryDB, podemos reconhecer os padrões de alimentação e analisar os alimentos mais consumidos por essa população.
+
 
 #### Pergunta/Análise 2
-> * Pergunta 2
+> * Quais os alimentos e receitas que mais contribuem para a ingestão de açúcares, gorduras e sódio para cada país/região?
 >   
->   * Explicação sucinta da análise que será feita.
+>   * Reconhecendo os padrões de alimentação de cada região através das receitas e cruzando isso com as informações nutricionais dos ingredientes, podemos definir quais deles têm maior contribuição na ingestão desses componentes.
+
 
 #### Pergunta/Análise 3
-> * Pergunta 3
+> * Quais são as receitas mais equilibradas em termos de macronutrientes (proteínas, gorduras e carboidratos) para cada país/região? 
 >   
->   * Explicação sucinta da análise que será feita.
+>   * Analisando os macronutrientes dos ingredientes de cada receita, podemos definir os macronutrientes da própria receita e assim compará-las para definir a mais equilibrada.
+
+#### Pergunta/Análise 4
+> * Qual a região com o perfil nutricional mais equilibrado?
+>   
+>   * Tendo como base as receitas mais consumidas em determinada região e traçando o perfil nutricional de cada uma, podemos definir o perfil da região com um todo.
+
 
 ### Perguntas/Análise Propostas mas Não Implementadas
 
-#### Pergunta/Análise 1
-> * Pergunta 1
->   
->   * Explicação em linhas gerais de como a base pode ser usada para responder esta pergunta e a sua relevância.
-
-#### Pergunta/Análise 2
-> * Pergunta 2
->   
->   * Explicação em linhas gerais de como a base pode ser usada para responder esta pergunta e a sua relevância.
-
-#### Pergunta/Análise 3
-> * 
->   
->
 ### Pegunta/Análise 1
 
 > * Quais são os ingredientes comuns em receitas de regiões com altas taxas de longevidade?
-
->  Podemos identificar os ingredientes das receitas populares das regiões filtradas através de dados auxiliares como: Expectativa de vida e Índice de Segurança Alimentar da região analisada. Assim, é possível investigar o padrão de consumo comum destas regiões, contribuindo assim para uma melhor compreensão da relação entre alimentação e longevidade.
+>
+>   * Podemos identificar os ingredientes das receitas populares das regiões filtradas através de dados auxiliares como: Expectativa de vida e Índice de Segurança Alimentar da região analisada. Assim, é possível investigar o padrão de consumo comum destas regiões, contribuindo assim para uma melhor compreensão da relação entre alimentação e longevidade.
 
 
 ### Pergunta/Análise 2
 > * Existe uma correlação entre a taxa de obesidade e a falta de alimentos saudáveis nas receitas populares em uma região?
-
-> Através de informações de Taxa de obesidade, Consumo de Frutas e Vegetais, Consumo de Alimentos Processados podemos filtrar as regiões e investigar uma correlação entre esses fatores e a carência de alimentos saudáveis nas receitas populares das regiões. A relação identificada pode ser crucial para formar políticas de saúde, promover escolhas alimentares mais saudáveis e uma possível reflexão da influência dos padrões culturais de alimentação na saúde de uma dada população.
+>
+>   * Através de informações de Taxa de obesidade, Consumo de Frutas e Vegetais, Consumo de Alimentos Processados podemos filtrar as regiões e investigar uma correlação entre esses fatores e a carência de alimentos saudáveis nas receitas populares das regiões. A relação identificada pode ser crucial para formar políticas de saúde, promover escolhas alimentares mais saudáveis e uma possível reflexão da influência dos padrões culturais de alimentação na saúde de uma dada população.
 
 ### Pergunta/Análise 3
 > * Quais são as melhores receitas para pessoas com restrições alimentares para um determinado país?
-
->   Fontes de proteínas para veganos/vegetarianos
+>
+>   * Fontes de proteínas para veganos/vegetarianos
 Receitas com baixo teor de gordura
 Fontes de cálcio para intolerantes à lactose
