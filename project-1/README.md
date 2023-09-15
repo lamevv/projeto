@@ -12,7 +12,8 @@
 
 título da base | link | breve descrição
 ----- | ----- | -----
-`<título da base>` | `<link para a página da base>` | `<breve descrição da base>`
+`FooDB` | <a href='https://foodb.ca'>`https://foodb.ca`</a> | `<breve descrição da base>`
+`CulinaryDB` | <a href='https://cosylab.iiitd.edu.in/culinarydb/'>`https://cosylab.iiitd.edu.in/culinarydb`</a> | `<breve descrição da base>`
 
 ## Modelo Conceitual
 
