@@ -5,10 +5,10 @@
 
 ## Motivação e Contexto
 
-> Descrição do tema do projeto, incluindo motivação e contexto gerador.
+> O projeto visa traçar o perfil nutricional médio por países e regiões com base nas suas respectivas receitas populares, buscando comparar e compreender as diferenças alimentares globais. A motivação do estudo reflete o contexto de crescente preocupação com a saúde e nutrição, dado o papel crucial da dieta no bem-estar humano.
+A análise da diversidade culinária por regiões permite entender como ingredientes e técnicas culinárias influenciam as refeições. Além disso, compreender o perfil nutricional médio destes pratos populares também possibilita a compreensão mais profunda das escolhas alimentares globais e suas implicações para a saúde pública.
 
 ## Bases de Dados
-> Elencar as bases de dados fonte utilizadas no projeto.
 
 título da base | link | breve descrição
 ----- | ----- | -----
@@ -22,9 +22,6 @@ título da base | link | breve descrição
 
 ## Modelos Lógicos
 
-> Coloque aqui o modelo lógico relacional dos bancos de dados relacionados ao modelos conceitual. Sugere-se o formato a seguir.
-
-> Exemplo de modelo lógico relacional
 ~~~
 NUTRIENTE(_Nome_, EhMacro)
 GRUPO_INGREDIENTE(_Id_, Nome)
@@ -57,7 +54,6 @@ PERFIL_NUTRICIONAL_REGIÃO(_NomeRegião_, Calorias, Carboidratos, Gorduras, Prot
 ~~~
 
 ## Perguntas de Pesquisa/Análise
-
 
 #### Pergunta/Análise 1
 > * Quais são os alimentos mais consumidos na população de uma dada região estudada?
