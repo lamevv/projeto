@@ -1,4 +1,4 @@
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lamevv/projeto/main)
+ [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lamevv/projeto/HEAD)
 
 # Projeto `Análise do Perfil Nutricional de uma Região`
 
