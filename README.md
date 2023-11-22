@@ -1,3 +1,5 @@
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lamevv/projeto/main)
+
 # Projeto `Análise do Perfil Nutricional de uma Região`
 
 # Equipe `LAMEV`
