@@ -1,18 +1,18 @@
-'Unit of Measurement','Approximation in grams'
-'teaspoon',5
-'tablespoon',15
-'pound',454
-'ounce',28
-'cup',250
-'bottle',750
-'can',355
-'container',100
-'gram',1
-'kilogram',1000
-'liter',1000
-'milliliter',1
-'pinch',0.35
-'pint',473
-'quart',946
-'scoop',24
-'unit',100
+Unit of Measurement,Approximation in grams
+teaspoon,5
+tablespoon,15
+pound,454
+ounce,28
+cup,250
+bottle,750
+can,355
+container,100
+gram,1
+kilogram,1000
+liter,1000
+milliliter,1
+pinch,0.35
+pint,473
+quart,946
+scoop,24
+unit,100
