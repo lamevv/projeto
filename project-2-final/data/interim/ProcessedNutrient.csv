@@ -1,0 +1,7 @@
+id,legacy_id,type,public_id,name,export,state,annotation_quality,description,wikipedia_id,comments,dfc_id,duke_id,eafus_id,dfc_name,compound_source,metabolism,synthesis_citations,general_citations,creator_id,updater_id,created_at,updated_at
+1,10930,,FDBN00001,Fat,false,,low,,,,,FAT,,,DUKE,,,,,,2014-11-05 13:42:10 UTC,2014-11-05 13:42:10 UTC
+2,10946,,FDBN00002,Proteins,false,,low,,,,,PROTEIN|PROTEINS,,,DUKE,,,,,,2014-11-05 13:42:15 UTC,2014-11-05 13:42:15 UTC
+3,16037,,FDBN00003,Carbohydrate,false,,low,"Carbohydrates (or saccharides) are organic compounds with the empirical formula Cm(H2O)n. The carbohydrates  are divided into four chemical groupings: monosaccharides, disaccharides, oligosaccharides, and polysaccharides. The monosaccharides and disaccharides are commonly referred to as sugars. [Wikipedia]",Carbohydrate,,,CARBOHYDRATE|CARBOHYDRATES,,,DUKE,,,,,,2014-11-05 13:44:06 UTC,2014-11-05 13:44:06 UTC
+4,23404,,FDBN00004,Fatty acids,false,,low,,,,,FATTY-ACIDS,1335,,EAFUS,,,,,,2014-11-05 13:46:00 UTC,2014-11-05 13:46:00 UTC
+5,11134,,FDBN00005,Fiber (dietary),false,,low,,,,,FIBER(DIETARY),,,DUKE,,,,,,2014-11-05 13:47:36 UTC,2014-11-05 13:47:36 UTC
+38,58928,,FDBN00038,Energy,false,,low,,,,,,,,TABLES,,,,,,2014-11-05 14:02:28 UTC,2014-11-05 14:02:28 UTC
