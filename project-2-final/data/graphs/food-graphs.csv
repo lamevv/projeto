@@ -1,0 +1,993 @@
+id,name
+1,Angelica
+2,Savoy cabbage
+3,Silver linden
+4,Kiwi
+5,Allium
+6,Garden onion
+7,Leek
+8,Garlic
+9,Chives
+10,Lemon verbena
+11,Cashew nut
+12,Pineapple
+13,Dill
+14,Custard apple
+15,Wild celery
+16,Peanut
+17,Burdock
+18,Horseradish
+19,Tarragon
+20,Mugwort
+21,Asparagus
+22,Oat
+23,Star fruit
+24,Brazil nut
+25,Common beet
+26,Borage
+27,Chinese mustard
+28,Swede
+29,Rape
+30,Common cabbage
+31,Cauliflower
+32,Brussel sprouts
+33,Kohlrabi
+34,Broccoli
+35,Chinese cabbage
+36,Turnip
+37,Pigeon pea
+38,Tea
+39,Capers
+40,Pepper
+41,Papaya
+42,Safflower
+43,Caraway
+44,Pecan nut
+45,Chestnut
+46,Roman camomile
+47,Chickpea
+48,Endive
+49,Chicory
+50,Chinese cinnamon
+51,Ceylon cinnamon
+52,Watermelon
+53,Lime
+54,Lemon
+55,Pummelo
+56,Mandarin orange
+57,Sweet orange
+58,Coffee
+59,Arabica coffee
+60,Robusta coffee
+61,Coriander
+62,Common hazelnut
+63,Saffron
+64,Muskmelon
+65,Cucumber
+66,Cucurbita
+67,Cumin
+68,Turmeric
+69,Quince
+70,Lemon grass
+71,Globe artichoke
+72,Wild carrot
+73,Japanese persimmon
+74,Cardamom
+75,Black crowberry
+76,Loquat
+77,Rocket salad (ssp.)
+78,Wax apple
+79,Common buckwheat
+80,Tartary buckwheat
+81,Fig
+82,Fennel
+83,Strawberry
+84,Black huckleberry
+85,Soy bean
+86,Sunflower
+87,Sea-buckthornberry
+88,Barley
+89,Hyssop
+90,Star anise
+91,Swamp cabbage
+92,Sweet potato
+93,Black walnut
+94,Common walnut
+95,Lettuce
+96,Grass pea
+97,Sweet bay
+98,Lentils
+99,Garden cress
+100,Lovage
+101,Flaxseed
+102,Mexican oregano
+103,Lichee
+104,Lupine
+105,Apple
+106,Mango
+107,German camomile
+108,Lemon balm
+109,Mentha
+110,Orange mint
+111,Cornmint
+112,Spearmint
+113,Peppermint
+114,Medlar
+115,Bitter gourd
+116,Mulberry
+117,Black mulberry
+118,Nutmeg
+119,Sweet basil
+120,Evening primrose
+121,Olive
+122,Sweet marjoram
+123,Pot marjoram
+124,Common oregano
+125,Rice
+126,Millet
+127,Poppy
+128,Passion fruit
+129,Parsnip
+130,Avocado
+131,Parsley
+132,Scarlet bean
+133,Lima bean
+134,Common bean
+135,Date
+136,Black chokeberry
+137,Anise
+138,Pine nut
+139,Pepper (Spice)
+140,Pistachio
+141,Common pea
+142,Purslane
+143,Prunus
+144,Apricot
+145,Sweet cherry
+146,Sour cherry
+147,European plum
+148,Almond
+149,Peach
+150,Guava
+151,Pomegranate
+152,Pear
+153,Radish
+154,Garden rhubarb
+155,Blackcurrant
+156,Redcurrant
+157,Gooseberry
+158,Watercress
+159,Rosemary
+160,Rubus
+161,Cloudberry
+162,Red raspberry
+163,Black raspberry
+164,Sorrel
+165,Common sage
+166,Black elderberry
+167,Summer savory
+168,Winter savory
+169,Rye
+170,Sesame
+171,Garden tomato
+172,Cherry tomato
+173,Garden tomato (var.)
+174,Eggplant
+175,Potato
+176,Rowanberry
+177,Sorghum
+178,Spinach
+179,Cloves
+180,Tamarind
+181,Dandelion
+182,Cocoa bean
+183,Common thyme
+184,Linden
+185,Small-leaf linden
+186,Fenugreek
+187,Common wheat
+188,Vaccinium
+189,Lowbush blueberry
+190,Sparkleberry
+191,Highbush blueberry
+192,American cranberry
+193,Bilberry
+194,Lingonberry
+195,Vanilla
+196,Common verbena
+197,Broad bean
+198,Adzuki bean
+199,Gram bean
+200,Mung bean
+201,Climbing bean
+202,Cowpea
+203,Muscadine grape
+204,Common grape
+205,Corn
+206,Ginger
+207,Arctic blackberry
+208,Banana
+209,Bayberry
+210,Elliott's blueberry
+211,Canada blueberry
+212,Bog bilberry
+213,Buffalo currant
+214,Celeriac
+215,Celery stalks
+216,Chinese chives
+217,European cranberry
+218,Deerberry
+219,Ginseng
+220,Cascade huckleberry
+221,Oval-leaf huckleberry
+222,Evergreen huckleberry
+223,Red huckleberry
+224,Longan
+225,Macadamia nut (M. tetraphylla)
+226,Garden onion (var.)
+227,Summer grape
+228,Fox grape
+229,Nectarine
+230,Peach (var.)
+231,Pepper (C. baccatum)
+232,Pepper (C. chinense)
+233,Pepper (Capsicum)
+234,Rambutan
+235,Red rice
+236,Annual wild rice
+237,Swiss chard
+238,Lemon thyme
+239,Tronchuda cabbage
+240,Japanese walnut
+241,Welsh onion
+242,Hard wheat
+243,Shallot
+244,Rocket salad
+245,Carrot
+246,Triticale
+247,Black cabbage
+248,Half-highbush blueberry
+249,Celery leaves
+250,Chicory leaves
+251,Komatsuna
+252,Pak choy
+253,Napa cabbage
+254,Chicory roots
+255,Grapefruit/Pummelo hybrid
+256,Grapefruit
+257,Jostaberry
+258,Kai-lan
+259,Italian oregano
+260,Oxheart cabbage
+261,Daikon radish
+262,Black radish
+263,Radish (var.)
+264,Red beetroot
+265,Sweet rowanberry
+266,Pineappple sage
+267,Skunk currant
+268,Beer
+269,Other bread
+270,Breakfast cereal
+272,Other soy product
+273,Other cereal product
+274,Pasta
+275,Biscuit
+276,Sourdough
+277,Spirit
+278,Fortified wine
+279,Other alcoholic beverage
+280,Abalone
+281,Abiyuch
+282,Acerola
+283,Acorn
+284,Winter squash
+285,Agar
+286,Red king crab
+287,Alfalfa
+288,Allspice
+289,Amaranth
+290,Arrowhead
+291,Arrowroot
+292,Asian pear
+293,Atlantic herring
+294,Atlantic mackerel
+295,Painted comber
+296,Atlantic pollock
+297,Atlantic wolffish
+298,Bamboo shoots
+299,Striped bass
+301,Beech nut
+302,Beluga whale
+303,Bison
+305,Alaska blackfish
+306,Blue crab
+307,Blue mussel
+308,Northern bluefin tuna
+309,Bluefish
+310,Wild boar
+311,Bowhead whale
+312,Breadfruit
+313,Breadnut tree seed
+314,Rapini
+316,Buffalo
+317,Burbot
+318,Giant butterbur
+319,American butterfish
+320,Butternut
+321,Butternut squash
+322,Calabash
+323,Cardoon
+325,Natal plum
+326,Carob
+327,Common carp
+328,Cassava
+329,Channel catfish
+330,Chayote
+331,Cherimoya
+332,Chervil
+333,Chia
+334,Chicken
+335,Chinese broccoli
+336,Chinese chestnut
+337,Chinese water chestnut
+338,Garland chrysanthemum
+339,Cisco
+340,Nuttall cockle
+341,Coconut
+342,Pacific cod
+343,Atlantic cod
+344,Common octopus
+345,Corn salad
+346,Cottonseed
+347,Catjang pea
+348,Malus (Crab apple)
+349,Squashberry
+350,Atlantic croaker
+351,Cusk
+352,Cuttlefish
+353,Mule deer
+354,Devilfish
+355,Dock
+356,Dolphin fish
+357,Freshwater drum
+358,Mallard duck
+359,Dungeness crab
+360,Durian
+361,Eastern oyster
+362,Freshwater eel
+363,Elderberry
+364,Elk
+365,Emu
+366,Oregon yampah
+367,European anchovy
+368,European chestnut
+369,Turbot
+370,Fireweed
+371,Florida pompano
+372,Ginkgo nuts
+373,Greylag goose
+374,Grape
+375,Greenland halibut/turbot
+376,Groundcherry
+377,Grouper
+378,Guinea hen
+379,Haddock
+380,Hippoglossus (Common halibut)
+381,Hazelnut
+382,Hickory nut
+383,Horse
+384,Horseradish tree
+385,Alaska blueberry
+386,Hyacinth bean
+387,Irish moss
+388,Pacific jack mackerel
+389,Jackfruit
+390,Japanese chestnut
+391,Java plum
+392,Jerusalem artichoke
+393,Jujube
+394,Jute
+395,Kale
+396,Kelp
+397,King mackerel
+398,Kumquat
+399,Lambsquarters
+400,Leather chiton
+401,Wild leek
+402,Common ling
+403,Lingcod
+404,American lobster
+405,Loganberry
+406,Lotus
+407,Sacred lotus
+408,White lupine
+409,Malabar spinach
+410,Mammee apple
+411,Purple mangosteen
+412,Alpine sweetvetch
+413,Milkfish
+414,Monkfish
+416,Moth bean
+417,Mountain yam
+418,Striped mullet
+420,White mustard
+421,Mustard spinach
+422,New Zealand spinach
+423,Nopal
+424,Ocean pout
+425,North Pacific giant octopus
+426,Ohelo berry
+427,Okra
+428,Tunicate
+430,Ostrich
+431,Spotted seal
+432,Pacific herring
+433,Pacific oyster
+434,Pacific rockfish
+435,Velvet duck
+436,Pepper (C. frutescens)
+437,Common persimmon
+438,Pheasant
+439,Northern pike
+440,Pili nut
+441,Colorado pinyon
+442,Pitanga
+443,Plains prickly pear
+444,French plantain
+445,American pokeweed
+447,Opium poppy
+448,Prairie turnip
+449,Prickly pear
+450,Quinoa
+451,European rabbit
+453,Rainbow smelt
+454,Rainbow trout
+455,Malabar plum
+456,Rose hip
+457,Roselle
+458,Orange roughy
+459,Sablefish
+460,Pink salmon
+461,Chum salmon
+462,Coho salmon
+463,Sockeye salmon
+464,Chinook salmon
+465,Atlantic salmon
+466,Salmonberry
+467,Common salsify
+468,Sapodilla
+469,Mamey sapote
+470,Spanish mackerel
+471,Pacific sardine
+472,Scallop
+473,Scup
+474,Sea cucumber
+475,Steller sea lion
+476,Bearded seal
+477,Ringed seal
+478,Sea trout
+479,Sesbania flower
+480,American shad
+481,Shark
+482,Sheefish
+483,Sheep
+484,Sheepshead
+485,Hedge mustard
+486,Skipjack tuna
+487,Snapper
+488,Soursop
+489,Spelt
+490,Spirulina
+491,Squab
+493,Strawberry guava
+494,Greater sturgeon
+495,White sucker
+496,Sugar apple
+497,Pumpkinseed sunfish
+498,Swordfish
+499,Taro
+500,Teff
+501,Tilefish
+502,Mexican groundcherry
+503,Towel gourd
+504,Salmonidae
+505,Turkey
+506,Cattle
+507,Walleye
+508,Alaska pollock
+509,Wasabi
+510,Wax gourd
+511,Whelk
+512,Coalfish pollock
+513,Broad whitefish
+514,Whitefish
+515,Whiting
+516,Wild rice
+517,Tea leaf willow
+518,Winged bean
+519,Yam
+520,Jicama
+521,Yautia
+522,Yellowfin tuna
+523,Yellowtail amberjack
+524,Pollock
+525,Albacore tuna
+526,Gadus (Common cod)
+527,Atlantic halibut
+528,Pacific halibut
+529,Pacific salmon
+530,Smelt
+531,Clupeinae
+532,Spiny lobster
+533,Snow crab
+534,Black-eyed pea
+535,Deer
+536,Macadamia nut
+537,Percoidei (Bass and others)
+538,Perciformes
+540,Rabbit
+541,Domestic goat
+542,Beefalo
+544,Bivalvia
+545,Squid
+546,Shrimp
+547,Crayfish
+548,Flatfish
+549,Domestic pig
+550,Walrus
+551,Alaska wild rhubarb
+552,Oriental wheat
+553,Yardlong bean
+555,Quail
+556,Boysenberry
+557,Persian lime
+558,Feijoa
+559,Rowal
+560,Jew's ear
+561,Common mushroom
+562,Shiitake
+563,Purple laver
+564,Wakame
+565,Enokitake
+566,Epazote
+567,Oyster mushroom
+568,Cloud ear fungus
+569,Maitake
+570,Ostrich fern
+571,Spot croaker
+572,Sourdock
+573,Tinda
+574,Atlantic menhaden
+575,Wheat
+576,Common chokecherry
+577,Agave
+578,Narrowleaf cattail
+579,Jellyfish
+580,Anchovy
+581,Blue whiting
+582,Carp bream
+583,Chanterelle
+584,Sturgeon
+585,Charr
+586,Cinnamon
+587,Crab
+588,Common dab
+589,Spiny dogfish
+590,Anatidae
+591,Anguilliformes
+592,True frog
+593,Garfish
+594,Gadiformes
+595,Mountain hare
+596,Lake trout
+597,Lemon sole
+598,Clawed lobster
+599,Lumpsucker
+600,Scombridae
+601,Marine mussel
+602,Norway haddock
+603,Norway lobster
+604,Norway pout
+605,Oil palm
+606,True oyster
+607,Sago palm
+608,Persimmon
+609,Pikeperch
+610,Pleuronectidae
+611,Rock ptarmigan
+612,Pacific ocean perch
+613,Black salsify
+614,True seal
+615,Red algae
+616,Kombu
+617,Snail
+618,True sole
+619,Catfish
+620,Thistle
+621,Thunnus
+622,Walnut
+623,Cetacea
+624,Columbidae
+625,Conch
+626,Grape wine
+627,Berry wine
+628,Other wine
+629,Apple cider
+630,Liquor
+631,Cheese
+632,Milk (Cow)
+633,Eggs
+634,Yogurt
+638,Bean
+639,Vodka
+640,Whisky
+641,Ice cream
+642,Gin
+643,Honey
+644,Liquorice
+645,Vinegar
+646,Rum
+647,Port wine
+648,Vermouth
+649,Sherry
+650,Madeira wine
+651,Nougat
+653,Toffee
+654,Cake
+655,Pizza
+656,Ymer
+657,Other snack food
+659,Crisp bread
+660,Pastry
+661,Dragée
+662,Chewing gum
+663,Marzipan
+664,Salad dressing
+665,Sauce
+666,Salt
+667,Butter
+668,Butter substitute
+669,Cream
+670,Sugar
+671,Sausage
+672,Meatball
+673,Mustard
+674,Pate
+676,Sugar substitute
+677,Meat bouillon
+679,Whey
+680,Casein
+681,Fruit preserve
+682,Leavening agent
+683,Marshmallow
+684,Gelatin
+685,Water
+686,Other fish product
+687,Milk (Human)
+689,Other beverage
+690,Baby food
+691,Dumpling
+692,Soup
+693,Other vegetable product
+694,Unclassified food or beverage
+695,Syrup
+696,Tallow
+697,Remoulade
+698,Chocolate spread
+699,Fruit gum
+700,Curry powder
+701,Other candy
+702,Meringue
+703,Lard
+704,Other animal fat
+705,Other cocoa product
+706,Cocoa butter
+707,Cocoa powder
+708,Cocoa liquor
+709,Chocolate
+710,Hot chocolate
+711,Dried milk
+712,Milk (Other mammals)
+713,Kefir
+714,Buttermilk
+715,Other fermented milk
+716,Soy sauce
+717,Miso
+718,Tofu
+721,Zwieback
+722,Roe
+723,Cichlidae (Tilapia)
+724,Icing
+725,Snack bar
+726,Green turtle
+727,Energy drink
+728,Burrito
+729,Hamburger
+730,Baked beans
+731,Chili
+732,Taco
+733,Tortilla
+734,Nachos
+735,Processed cheese
+736,Salad
+737,Cream substitute
+738,Dulce de leche
+739,Topping
+740,Sweet custard
+742,Egg roll
+743,Heart of palm
+744,Popcorn
+745,Potato chip
+746,Tortilla chip
+747,Corn chip
+748,Hibiscus tea
+749,Stew
+750,Gelatin dessert
+751,Junket
+752,Falafel
+753,Frybread
+754,Other frozen dessert
+755,Lasagna
+756,Morchella (Morel)
+757,Pancake
+758,Pectin
+759,Pudding
+760,Waffle
+761,Soy milk
+762,Meatloaf
+763,Sake
+764,Cocktail
+765,Couscous
+766,Bulgur
+767,Coffee substitute
+768,Coffee mocha
+769,Chimichanga
+770,Semolina
+771,Tapioca pearl
+772,Tostada
+773,Quesadilla
+774,Baked potato
+775,Hot dog
+776,Spread
+777,Enchilada
+778,Egg substitute
+779,Nutritional drink
+780,Other sandwich
+781,Ketchup
+782,Breakfast sandwich
+783,Adobo
+784,Macaroni and cheese
+785,Butterfat
+786,Horned melon
+787,Hushpuppy
+788,Fruit juice
+789,Relish
+790,Other fruit product
+791,Fruit salad
+792,Soy yogurt
+793,Vegetarian food
+794,Veggie burger
+795,Cold cut
+796,Mixed nuts
+797,Canola
+798,Babassu palm
+799,Cupuaçu
+800,Shea tree
+801,Oil-seed Camellia
+802,Ucuhuba
+803,Phyllo dough
+804,Cooking oil
+805,Pie crust
+806,Pie filling
+807,Pie
+808,Shortening
+809,Soy cream
+810,Ice cream cone
+811,Molasses
+812,Cracker
+813,Nance
+814,Naranjilla
+815,Natto
+816,Ravioli
+817,Scrapple
+818,Other pasta dish
+819,Succotash
+820,Tamale
+822,Rice cake
+823,Tree fern
+824,Evaporated milk
+825,Flour
+826,Akutaq
+828,Dough
+829,Pita bread
+830,Focaccia
+831,Bagel
+832,Other bread product
+834,Piki bread
+835,French toast
+836,Wheat bread
+837,Rye bread
+838,Oat bread
+839,Potato bread
+840,Cornbread
+841,Corn grits
+842,Multigrain bread
+843,Rice bread
+844,Pan dulce
+845,Raisin bread
+846,Wonton wrapper
+848,Trail mix
+849,Greenthread tea
+850,Fruit-flavor drink
+851,Vegetable juice
+852,Horchata
+853,Soft drink
+854,Frozen yogurt
+855,Milkshake
+856,Chocolate mousse
+857,Dripping
+858,Pupusa
+859,Empanada
+860,Arepa
+861,Ascidians
+862,Gefilte fish
+863,Yellow pond-lily
+864,Fish burger
+865,Other dish
+866,Pot pie
+867,Stuffing
+868,Edible shell
+869,Fudge
+870,Candy bar
+871,Condensed milk
+872,Margarine
+873,Margarine-like spread
+874,Hummus
+876,Potato puffs
+877,Potato gratin
+878,Milk substitute
+879,Pepper (C. pubescens)
+880,Soft-necked garlic
+881,Cabbage
+882,Chinese bayberry
+883,Mushrooms
+884,Alcoholic beverages
+885,Onion-family vegetables
+886,Pomes
+887,Brassicas
+888,Cereals and cereal products
+889,Citrus
+890,Cocoa and cocoa products
+891,Coffee and coffee products
+892,Crustaceans
+893,Milk and milk products
+894,Fats and oils
+896,Fishes
+897,Herbs and Spices
+898,Pulses
+900,Mollusks
+901,Nuts
+902,Beverages
+903,Fruits
+904,Green vegetables
+905,Root vegetables
+906,Sunburst squash (pattypan squash)
+907,Green zucchini
+908,Yellow zucchini
+909,Green bell pepper
+910,Yellow bell pepper
+911,Orange bell pepper
+912,Red bell pepper
+913,Italian sweet red pepper
+914,Yellow wax bean
+915,Green bean
+916,Saskatoon berry
+917,Nanking cherry
+918,Japanese pumpkin
+919,White cabbage
+920,Romaine lettuce
+921,Cow milk 0% fat
+922,Cow milk 1% fat
+923,Cow milk 2% fat
+924,Cow milk 3.25% fat
+925,Castanospermum australe
+926,Gentiana lutea
+927,Juniperus communis
+928,Albizia gummifera
+929,Mundu
+930,Rabbiteye blueberry
+931,Yali pear
+932,Asparagus racemosus
+933,Evergreen blackberry
+934,Asparagus fern
+935,Thornless blackberry
+936,Tropical highland blackberry
+937,Andean blackberry
+938,Blackberry
+939,Black tea
+940,Green tea
+941,Olive oil
+942,Macroalgae
+943,Red wine
+944,linseed oil
+945,Rapeseed oil
+946,Soybean oil
+947,Guarana
+948,Mate
+949,White wine
+950,Sour orange
+951,Egg yolk
+952,Rosé wine
+953,White mulberry
+954,Canola oil
+955,Dessert wine
+956,Red champagne
+957,Red tea
+958,White champagne
+959,Red grape juice
+960,White grape juice
+961,Crosne
+962,Red clover
+963,Partridge berry
+964,Mikan
+965,Mozzarella cheese
+966,Plain cream cheese
+967,Cheddar Cheese
+968,Parmesan cheese
+969,Almond milk
+970,Coconut milk
+971,Salted butter
+972,Sunflower oil
+973,Coconut oil
+974,Peanut oil
+975,Cottonseed oil
+976,Corn oil
+977,Avocado oil
+978,Grapeseed oil
+979,Sesame oil
+980,Monterey Jack cheese
+981,Swiss cheese
+982,Cottage cheese
+983,Blue cheese
+984,Clam
+985,Sour cream
+986,Whole wheat bread
+987,Jalapeno pepper
+988,Greek feta cheese
+989,Eddoe
+990,Plantain
+991,Clementine
+992,Green apple
+993,White onion
+994,Red onion
+995,Green onion
+996,Green grape
+997,Red grape
+998,Black plum
+999,Green cabbage
+1000,Black raisin
+1001,Cannellini bean
+1002,Green lentil
+1003,Cubanelle pepper
+1004,Acorn squash
+1005,Iceberg lettuce
+1006,Japanese sea bass
+1007,Pea shoots
+1008,Yau choy
+1009,Water spinach
+1010,Chineese plum
+1011,Green plum
+1012,Wampee
+1013,Pitaya
+1014,Goji
+1015,Monk fruit
+1016,Cantaloupe melon
+1017,Hawthorn
+1018,Lantern fruit
+1019,White bread
+1020,Cape gooseberry
+1021,Herbal tea
+1022,Fish oil
+1023,Taco shell
+1024,Tostada shell
