@@ -218,6 +218,21 @@ SET RP.fat = (SELECT COALESCE(SUM(RIF.fat), 0) FROM RecipeIngredientFat RIF WHER
 >   
 >   * Através do perfil nutricional de cada receita, podemos definir se a receita é balanceada com base em parâmetros padrões de proteínas, gorduras e carboidratos. Na nossa análise, consideramos balanceado uma receita que seja composta com até 10% de gordura, 50% de carboidrato e pelo menos 10% de proteína.
 
+~~~SQL
+DROP VIEW IF EXISTS RecipeProfileComplete;
+
+CREATE VIEW RecipeProfileComplete AS
+SELECT R.Recipe_Id, R.Title, R.Region, RP.weight recipe_weight, RP.fat total_fat, RP.fat/RP.weight per_fat,
+        RP.carbo total_carbo, RP.carbo/RP.weight per_carbo, RP.protein total_protein, RP.protein/RP.weight per_protein,
+        (RP.fat / RP.weight <= 0.1
+         AND RP.carbo / RP.weight <= 0.5
+         AND RP.protein / RP.weight >= 0.1) AS equilibrado
+    FROM Recipes R, Recipe_Profile RP
+    WHERE R.Recipe_Id = RP.Recipe_Id
+    GROUP BY R.Recipe_Id
+    ORDER BY Region;
+~~~
+
 #### Pergunta/Análise 4
 > * Existe um diferença entre o perfil nutricional de diferentes regiões, de modo que uma seja mais balanceada do que a outra?
 >   
