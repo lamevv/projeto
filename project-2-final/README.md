@@ -120,20 +120,98 @@ Desse modo, no notebook [units-of-measurement-data](https://github.com/lamevv/pr
 #### Pergunta/Análise 1
 > * Quais são os alimentos mais presentes nas receitas de cada região?
 >   
->   * Explicação sucinta da análise que será feita e conjunto de queries que
->     responde à pergunta.
+>   * Utilizando funções de agregamento, descobrimos o qual frequente é um ingrediente na composição dos alimentos de uma região. Dessa forma, definindo-se os parametros, pegamos aqueles que tinham frequências acima da média das frequencias relacionadas à cada região. O resultado foi que obtivemos alimentos que são muito populares, como ovo, pão e água.
+
+~~~SQL
+DROP VIEW IF EXISTS MostFrequentIngredients;
+
+CREATE VIEW MostFrequentIngredients AS
+SELECT F.Region, I.Food_Id, I.Food_Name, COUNT(Food_Id) frequencia
+    FROM (SELECT Region, AVG(frequencia) std_frequencia, STDDEV(frequencia) desvpad_frequencia
+                FROM (SELECT Region, Food_Id, COUNT(Food_Id) frequencia
+                      FROM Recipes R JOIN Ingredients I ON R.Recipe_Id = I.Recipe_Id
+                      GROUP BY Region, Food_Id
+                      ORDER BY Region, frequencia DESC) F
+          GROUP BY Region) F, Recipes R, Ingredients I
+    WHERE  R.Region = F.Region AND R.Recipe_Id=I.Recipe_Id
+    GROUP BY F.Region, I.Food_Id, I.Food_Name
+    HAVING COUNT(Food_Id) >= std_frequencia + desvpad_frequencia
+    ORDER BY frequencia DESC;
+~~~
+
+
 
 #### Pergunta/Análise 2
 > * Quais os alimentos e receitas que mais contribuem para a ingestão de açúcares, gorduras e proteínas para cada região?
 >   
->   * Explicação sucinta da análise que será feita e conjunto de queries que
->     responde à pergunta.
+>   * Traçamos um perfil nutricional de cada receita, que contém informações dos macronutrientes (proteínas, gorduras e carboidratos) presentes. A partir disso, podemos filtrar receitas com altos teores desses macronutrientes, de acordo com a região.
+
+~~~SQL
+CREATE TABLE Recipe_Profile (
+    Recipe_Id INT NOT NULL,
+    weight FLOAT DEFAULT 0,
+    fat FLOAT DEFAULT 0,
+    carbo FLOAT DEFAULT 0,
+    protein FLOAT DEFAULT 0,
+    PRIMARY KEY(Recipe_Id),
+    FOREIGN KEY(Recipe_Id)
+        REFERENCES Recipes(Recipe_Id)
+            ON UPDATE NO ACTION
+            ON DELETE NO ACTION
+);
+~~~
+~~~SQL
+UPDATE Recipe_Profile RP
+SET RP.fat = (SELECT COALESCE(SUM(RIF.fat), 0) FROM RecipeIngredientFat RIF WHERE RIF.Recipe_Id = RP.Recipe_Id),
+    RP.protein = (SELECT COALESCE(SUM(RIP.protein), 0) FROM RecipeIngredientProtein RIP WHERE RIP.Recipe_Id = RP.Recipe_Id),
+    RP.carbo = (SELECT COALESCE(SUM(RIC.carbo), 0) FROM RecipeIngredientCarbo RIC WHERE RIC.Recipe_Id = RP.Recipe_Id),
+    RP.weight = (SELECT COALESCE(SUM(RI.qnt_grams), 0) FROM RecipeIngredients RI WHERE RI.Recipe_Id = RP.Recipe_Id);
+~~~
 
 #### Pergunta/Análise 3
-> * TODO --> Quais são as receitas mais equilibradas em termos de macronutrientes (proteínas, gorduras e carboidratos) para cada região? 
+> * Quais são as receitas mais equilibradas em termos de macronutrientes (proteínas, gorduras e carboidratos) para cada região? 
 >   
->   * Explicação sucinta da análise que será feita e conjunto de queries que
->     responde à pergunta.
+>   * Através do perfil nutricional de cada receita, podemos definir se a receita é balanceada com base em parametros padrões de proteínas, gorduras e carboidratos. Na nossa análise, consederamos balanceado uma receita que seja composta com até 10% de gordura, 50% de carboidrado e pelo menos 10% de proteína.
+
+#### Pergunta/Análise 4
+> * Existe um diferença entre o perfis nutricional de diferentes regiões, de modo que uma seja mais balanceada do que a outra?
+>   
+>   * Traçando um perfil nutricional de cada região, com base nas receitas consumidas, foi possível constatar que o perfil nutricional das regiões, em geral, convergem para um perfil, dado que os valores de desvio padrão da quantidade de macronutrientes é pequeno.
+
+~~~SQL
+CREATE TABLE Region_Profile (
+    Region VARCHAR(50),
+    Food_Total_Weight_Kg FLOAT DEFAULT 0,
+    Total_Fat FLOAT DEFAULT 0,
+    Total_Protein FLOAT DEFAULT 0,
+    Total_Carbo FLOAT DEFAULT 0,
+    Per_Fat FLOAT DEFAULT 0,
+    Per_Protein FLOAT DEFAULT 0,
+    Per_Carbo FLOAT DEFAULT 0,
+    PRIMARY KEY(Region)
+);
+~~~
+~~~SQL
+UPDATE Region_Profile RP
+SET
+    Food_Total_Weight_Kg = (SELECT COALESCE(SUM(RPC.recipe_weight/1000), 0) FROM RecipeProfileComplete RPC WHERE RPC.Region = RP.Region),
+    Total_Fat = (SELECT COALESCE(SUM(RPC.total_fat/1000), 0) FROM RecipeProfileComplete RPC WHERE RPC.Region = RP.Region),
+    Total_Carbo = (SELECT COALESCE(SUM(RPC.total_carbo/1000), 0) FROM RecipeProfileComplete RPC WHERE RPC.Region = RP.Region),
+    Total_Protein = (SELECT COALESCE(SUM(RPC.total_protein/1000), 0) FROM RecipeProfileComplete RPC WHERE RPC.Region = RP.Region);
+
+UPDATE Region_Profile RP
+SET
+    Per_Protein = Total_Protein/Food_Total_Weight_Kg,
+    Per_Fat = Total_Fat/Food_Total_Weight_Kg,
+    Per_Carbo = Total_Carbo/Food_Total_Weight_Kg; 
+~~~
+
+~~~SQL
+SELECT STDDEV(Per_Fat) DSP_Fat, AVG(Per_Fat) AVG_Fat,
+        STDDEV(Per_Protein) DSP_Protein, AVG(Per_Protein) AVG_Protein,
+        STDDEV(Per_Carbo) DSP_Carbo, AVG(Per_Carbo) AVG_Carbo FROM Region_Profile;
+~~~
+
 
 ### Perguntas/Análise Propostas mas Não Implementadas
 
