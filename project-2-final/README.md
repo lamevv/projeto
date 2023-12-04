@@ -166,7 +166,7 @@ df_with_unit.to_csv('../data/interim/IngredientOnFood.csv', index=False)
 #### Pergunta/Análise 1
 > * Quais são os alimentos mais presentes nas receitas de cada região?
 >   
->   * Utilizando funções de agregamento, descobrimos o qual frequente é um ingrediente na composição dos alimentos de uma região. Dessa forma, definindo-se os parametros, pegamos aqueles que tinham frequências acima da média das frequencias relacionadas à cada região. O resultado foi que obtivemos alimentos que são muito populares, como ovo, pão e água.
+>   * Utilizando funções de agregamento, descobrimos o quão frequente é um ingrediente na composição dos alimentos de uma região. Dessa forma, definindo-se os parâmetros, pegamos aqueles que tinham frequências acima da média das frequências relacionadas à cada região. O resultado foi que obtivemos alimentos que são muito populares, como ovo, pão e água.
 
 ~~~SQL
 DROP VIEW IF EXISTS MostFrequentIngredients;
@@ -216,10 +216,10 @@ SET RP.fat = (SELECT COALESCE(SUM(RIF.fat), 0) FROM RecipeIngredientFat RIF WHER
 #### Pergunta/Análise 3
 > * Quais são as receitas mais equilibradas em termos de macronutrientes (proteínas, gorduras e carboidratos) para cada região? 
 >   
->   * Através do perfil nutricional de cada receita, podemos definir se a receita é balanceada com base em parametros padrões de proteínas, gorduras e carboidratos. Na nossa análise, consederamos balanceado uma receita que seja composta com até 10% de gordura, 50% de carboidrado e pelo menos 10% de proteína.
+>   * Através do perfil nutricional de cada receita, podemos definir se a receita é balanceada com base em parâmetros padrões de proteínas, gorduras e carboidratos. Na nossa análise, consideramos balanceado uma receita que seja composta com até 10% de gordura, 50% de carboidrato e pelo menos 10% de proteína.
 
 #### Pergunta/Análise 4
-> * Existe um diferença entre o perfis nutricional de diferentes regiões, de modo que uma seja mais balanceada do que a outra?
+> * Existe um diferença entre o perfil nutricional de diferentes regiões, de modo que uma seja mais balanceada do que a outra?
 >   
 >   * Traçando um perfil nutricional de cada região, com base nas receitas consumidas, foi possível constatar que o perfil nutricional das regiões, em geral, convergem para um perfil, dado que os valores de desvio padrão da quantidade de macronutrientes é pequeno.
 
