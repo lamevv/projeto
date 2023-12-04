@@ -40,8 +40,8 @@ Ingredients(_Recipe_ID_, _Food_ID_, quantity, food_name, unit)
   Unit: chave estrangeira para Units
 ~~~
 
-- Modelo Lógico de Grafos (TODO --> VICTOR WU COLOCA IMAGEM CERTA)
-> ![Grafos](images/ModeloLogicoGrafo.png)
+- Modelo Lógico de Grafos
+> ![Grafos](images/ModeloLogicoGrafos.jpg)
 
 ## Dataset Publicado
 > Se ao tratar e integrar os dados originais foram produzidas novas bases relacionais ou de grafos, elencar essas bases.
