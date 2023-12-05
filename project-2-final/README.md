@@ -310,45 +310,6 @@ Amostra do resultado da Pergunta/Análise 3, com resultado completo apresentado 
 
 ![AmostraReceitasEquilibradas](images/ResultQuery3.png)
 
-#### Pergunta/Análise 4
-> * Existe um diferença entre o perfil nutricional de diferentes regiões, de modo que uma seja mais balanceada do que a outra?
->   
->   * Traçando um perfil nutricional de cada região, com base nas receitas consumidas, foi possível constatar que o perfil nutricional das regiões, em geral, convergem para um perfil, dado que os valores de desvio padrão da quantidade de macronutrientes é pequeno.
-
-~~~SQL
-CREATE TABLE Region_Profile (
-    Region VARCHAR(50),
-    Food_Total_Weight_Kg FLOAT DEFAULT 0,
-    Total_Fat FLOAT DEFAULT 0,
-    Total_Protein FLOAT DEFAULT 0,
-    Total_Carbo FLOAT DEFAULT 0,
-    Per_Fat FLOAT DEFAULT 0,
-    Per_Protein FLOAT DEFAULT 0,
-    Per_Carbo FLOAT DEFAULT 0,
-    PRIMARY KEY(Region)
-);
-~~~
-~~~SQL
-UPDATE Region_Profile RP
-SET
-    Food_Total_Weight_Kg = (SELECT COALESCE(SUM(RPC.recipe_weight/1000), 0) FROM RecipeProfileComplete RPC WHERE RPC.Region = RP.Region),
-    Total_Fat = (SELECT COALESCE(SUM(RPC.total_fat/1000), 0) FROM RecipeProfileComplete RPC WHERE RPC.Region = RP.Region),
-    Total_Carbo = (SELECT COALESCE(SUM(RPC.total_carbo/1000), 0) FROM RecipeProfileComplete RPC WHERE RPC.Region = RP.Region),
-    Total_Protein = (SELECT COALESCE(SUM(RPC.total_protein/1000), 0) FROM RecipeProfileComplete RPC WHERE RPC.Region = RP.Region);
-
-UPDATE Region_Profile RP
-SET
-    Per_Protein = Total_Protein/Food_Total_Weight_Kg,
-    Per_Fat = Total_Fat/Food_Total_Weight_Kg,
-    Per_Carbo = Total_Carbo/Food_Total_Weight_Kg; 
-~~~
-
-~~~SQL
-SELECT STDDEV(Per_Fat) DSP_Fat, AVG(Per_Fat) AVG_Fat,
-        STDDEV(Per_Protein) DSP_Protein, AVG(Per_Protein) AVG_Protein,
-        STDDEV(Per_Carbo) DSP_Carbo, AVG(Per_Carbo) AVG_Carbo FROM Region_Profile;
-~~~
-
 
 ### Perguntas/Análise Propostas mas Não Implementadas
 
