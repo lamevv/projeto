@@ -293,7 +293,7 @@ SELECT STDDEV(Per_Fat) DSP_Fat, AVG(Per_Fat) AVG_Fat,
 >   * Seria possível construir uma relação entre nós do tipo Food, em que dois nós conectam quando seus respectivos alimentos aparecem em uma mesma receita de uma mesma região. A partir de tal relação, seria calculado o Degree Centrality do grafo, elencando os alimentos de maior relevância (em termos de conexões) de uma região, o que possibilita a construção de um perfil nutricional da região baseado nos alimentos mais populares.
 
 #### Pergunta/Análise 4
-> * É possível construir uma relação entre o perfil nutricional das regiões?
+> * [Grafos] É possível construir uma relação entre o perfil nutricional das regiões?
 >   
 >   * A partir da relação entre nós mencionada na pergunta acima, poderíamos utilizar o conceito de Comunidade, a fim de identificar comunidade de alimentos nos grafos. Assim, seria possível verificar se alguma comunidade representa uma interseção do conjuntos de alimentos de regiões distintas. Tal interseção seria um indício de uma possível relação do perfil nutricional de tais regiões.
 
