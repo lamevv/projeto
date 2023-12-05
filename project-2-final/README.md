@@ -9,10 +9,10 @@
 ## Slides
 
 ### Apresentação Prévia
-> Coloque aqui o link para o PDF da apresentação prévia
+> [Link da Apresentação Prévia](../project-1/projeto1-mc536.pdf)
 
 ### Apresentação Final
-> Coloque aqui o link para o PDF da apresentação final
+> [Link da Apresentação Final](docs/Apresentacao-Projeto-Final.pdf)
 
 ## Modelo Conceitual
 
@@ -44,7 +44,6 @@ Ingredients(_Recipe_ID_, _Food_ID_, quantity, food_name, unit)
 > ![Grafos](images/ModeloLogicoGrafos.jpg)
 
 ## Dataset Publicado
-> Se ao tratar e integrar os dados originais foram produzidas novas bases relacionais ou de grafos, elencar essas bases.
 
 título do arquivo/base | link | breve descrição
 ----- | ----- | -----
@@ -59,10 +58,6 @@ título do arquivo/base | link | breve descrição
 `food-graphs` | [data/graphs/food-graphs.csv](https://github.com/lamevv/projeto/blob/main/project-2-final/data/graphs/food-graphs.csv) | `Dispõe dos campos "id" e "name" da tabela Food. Tem como principal objetivo minimizar o volume de dados na criação do banco de dados em grafos`
 `nutrient-graphs` | [data/graphs/nutrient-graphs.csv](https://github.com/lamevv/projeto/blob/main/project-2-final/data/graphs/nutrient-graphs.csv) | `Dispõe dos campos "id" e "name" da tabela Nutrient. Tem como principal objetivo minimizar o volume de dados na criação do banco de dados em grafos`
 
-> Os arquivos finais do dataset publicado devem ser colocados na pasta `data`, em subpasta `processed`. Outros arquivos serão colocados em subpastas conforme seu papel (externo, interim, raw). A diferença entre externo e raw é que o raw é em formato não adaptado para uso. A pasta `raw` é opcional, pois pode ser substituída pelo link para a base original da seção anterior.
-> Coloque arquivos que não estejam disponíveis online e sejam acessados pelo notebook. Relacionais (usualmente CSV), XML, JSON e CSV ou triplas para grafos.
-> Este é o conjunto mínimo de informações que deve constar na disponibilização do Dataset, mas a equipe pode enriquecer esta seção.
-
 ## Bases de Dados
 
 título da base | link | breve descrição
@@ -71,17 +66,6 @@ título da base | link | breve descrição
 `CulinaryDB` | <a href='https://cosylab.iiitd.edu.in/culinarydb/'>`https://cosylab.iiitd.edu.in/culinarydb`</a> | `Composição de receitas regionais, detalhando ingredientes e suas quantidades correspondentes`
 
 ## Detalhamento do Projeto
-> Apresente aqui detalhes do processo de construção do dataset e análise. Nesta seção ou na seção de Perguntas podem aparecer destaques de código como indicado a seguir. Note que foi usada uma técnica de highlight de código, que envolve colocar o nome da linguagem na abertura de um trecho com `~~~`, tal como `~~~python`.
-> Os destaques de código devem ser trechos pequenos de poucas linhas, que estejam diretamente ligados a alguma explicação. Não utilize trechos extensos de código. Se algum código funcionar online (tal como um Jupyter Notebook), aqui pode haver links. No caso do Jupyter, preferencialmente para o Binder abrindo diretamente o notebook em questão.
-
-> Aqui devem ser apresentadas as operações de construção do dataset:
-* extração de dados de fontes não estruturadas como, por exemplo, páginas Web
-* agregação de dados fragmentados obtidos a partir de API
-* integração de dados de múltiplas fontes
-* tratamento de dados
-* transformação de dados para facilitar análise e pesquisa
-
-> Se for notebook, ele estará dentro da pasta `notebook`. Se por alguma razão o código não for executável no Jupyter, coloque na pasta `src` (por exemplo, arquivos do Orange ou Cytoscape). Se as operações envolverem queries executadas atraves de uma interface de um SGBD não executável no Jupyter, como o Cypher, apresente na forma de markdown.
 
 - Transformação e adequação dos dados das receitas do `CulinaryDB`
 
@@ -155,15 +139,9 @@ df_with_unit.to_csv('../data/interim/IngredientOnFood.csv', index=False)
 
 ## Perguntas de Pesquisa/Análise Combinadas e Respectivas Análises
 
-> Apresente os resultados da forma mais rica possível, com gráficos e tabelas. Mesmo que o seu código rode online em um notebook, copie para esta parte a figura estática. A referência a código e links para execução online pode ser feita aqui ou na seção de detalhamento do projeto (o que for mais pertinente).
-
-> Liste aqui as perguntas de pesquisa/análise e respectivas análises. Nem todas as perguntas precisam de queries que as implementam. É possível haver perguntas em que a solução é apenas descrita para demonstrar o potencial da base. Abaixo são ilustradas três perguntas, mas pode ser um número maior a critério da equipe.
->
 ### Perguntas/Análise com Resposta Implementada
 
-> As respostas às perguntas podem devem ser ilustradas da forma mais rica possível com tabelas resultantes, grafos ou gráficos que apresentam os resultados. Os resultados podem ser analisados e comentados. Veja um exemplo de figura ilustrando uma comunidade detectada no Cytoscape:
-
-> ![Comunidade no Cytoscape](images/cytoscape-comunidade.png)
+O conjunto das *queries* e análises apresentadas abaixo estão detelhadas no *notebook* [nutricional-profile-analysis](notebooks/nutricional-profile-analysis.ipynb).
 
 #### Pergunta/Análise 1
 > * Quais são os alimentos mais presentes nas receitas de cada região?
@@ -186,6 +164,10 @@ SELECT F.Region, I.Food_Id, I.Food_Name, COUNT(Food_Id) frequencia
     HAVING COUNT(Food_Id) >= std_frequencia + desvpad_frequencia
     ORDER BY frequencia DESC;
 ~~~
+
+Amostra do resultado da Pergunta/Análise 1, com resultado completo apresentado no arquivo [MostFrequentIngredients](https://github.com/lamevv/projeto/blob/main/project-2-final/data/processed/MostFrequentIngredients.csv):
+
+![AmostraIngredientesFrequentes](images/ResultQuery1.png)
 
 #### Pergunta/Análise 2
 > * Quais os alimentos e receitas que mais contribuem para a ingestão de açúcares, gorduras e proteínas para cada região?
@@ -215,6 +197,10 @@ SET RP.fat = (SELECT COALESCE(SUM(RIF.fat), 0) FROM RecipeIngredientFat RIF WHER
     RP.weight = (SELECT COALESCE(SUM(RI.qnt_grams), 0) FROM RecipeIngredients RI WHERE RI.Recipe_Id = RP.Recipe_Id);
 ~~~
 
+Amostra do resultado da Pergunta/Análise 2, com resultado completo apresentado no arquivo [RecipeProfile](https://raw.githubusercontent.com/lamevv/projeto/main/project-2-final/data/processed/RecipeProfile.csv):
+
+![AmostraPerfilReceitas](images/ResultQuery2.png)
+
 #### Pergunta/Análise 3
 > * Quais são as receitas mais equilibradas em termos de macronutrientes (proteínas, gorduras e carboidratos) para cada região? 
 >   
@@ -234,6 +220,10 @@ SELECT R.Recipe_Id, R.Title, R.Region, RP.weight recipe_weight, RP.fat total_fat
     GROUP BY R.Recipe_Id
     ORDER BY Region;
 ~~~
+
+Amostra do resultado da Pergunta/Análise 3, com resultado completo apresentado no arquivo [RegionalNutricionalProfile](https://github.com/lamevv/projeto/blob/main/project-2-final/data/processed/RegionalNutricionalProfile.csv):
+
+![AmostraReceitasEquilibradas](images/ResultQuery3.png)
 
 #### Pergunta/Análise 4
 > * Existe um diferença entre o perfil nutricional de diferentes regiões, de modo que uma seja mais balanceada do que a outra?
@@ -296,5 +286,3 @@ SELECT STDDEV(Per_Fat) DSP_Fat, AVG(Per_Fat) AVG_Fat,
 > * [Grafos] É possível construir uma relação entre o perfil nutricional das regiões?
 >   
 >   * A partir da relação entre nós mencionada na pergunta acima, poderíamos utilizar o conceito de Comunidade, a fim de identificar comunidade de alimentos nos grafos. Assim, seria possível verificar se alguma comunidade representa uma interseção do conjuntos de alimentos de regiões distintas. Tal interseção seria um indício de uma possível relação do perfil nutricional de tais regiões.
-
-> Coloque um link para o arquivo do notebook que executa o conjunto de queries. Ele estará dentro da pasta `notebook`. Se por alguma razão o código não for executável no Jupyter, coloque na pasta `src`. Se as queries forem executadas atraves de uma interface de um SGBD não executável no Jupyter, como o Cypher, apresente na forma de markdown.
