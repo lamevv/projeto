@@ -221,9 +221,6 @@ Durante a construção do projeto, encontramos diversos desafios associados aos 
 * **Perguntas implementadas**: ao longo do processo de construção do projeto, encontramos algumas limitações associadas aos dados e a forma com que eles eram apresentados. Dessa forma, tivemos que mudar algumas perguntas implementadas para perguntas que fossem mais compatíveis com o modelo estruturado.
 * **Queries SQL**: para realizar as queries SQL que responderiam as perguntas implementadas, tentamos utilizar VIEW's. No entanto, para algumas tabelas de junção, o volume de dados era muito grande, o que tornava inviável este tipo de abordagem. Por isso, tivemos que criar tabelas específicas para possibilitar o acesso de algumas informações. Por exemplo, a tabela `RecipeProfile`, que mostra a quantidade de proteína, carboidrato gordura em uma receita, foi criada a fim de evitar o uso de VIEW.
 * **Queries Cypher**: ao tentar fazer o carregamento de algumas tabelas para criar nós no Cypher, obtivemos erro relacionados a formatações de alguns atributos textuais. Por isso, tivemos que criar novas tabelas com colunas filtradas, eliminando as inconsistências apontadas.
-> Relatório de evolução, descrevendo as evoluções na modelagem do projeto, dificuldades enfrentadas, mudanças de rumo, melhorias e lições aprendidas. Referências aos diagramas, modelos e recortes de mudanças são bem-vindos.
-> Podem ser apresentados destaques na evolução dos modelos conceitual e lógico. O modelo inicial e intermediários (quando relevantes) e explicação de refinamentos, mudanças ou evolução do projeto que fundamentaram as decisões.
-> Relatar o processo para se alcançar os resultados é tão importante quanto os resultados.
 
 ## Perguntas de Pesquisa/Análise Combinadas e Respectivas Análises
 
