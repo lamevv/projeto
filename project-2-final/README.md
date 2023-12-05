@@ -67,6 +67,8 @@ título da base | link | breve descrição
 
 ## Detalhamento do Projeto
 
+### Pré-processamento
+
 - Transformação e adequação dos dados das receitas do `CulinaryDB`
 
 A fim de criar a tabela `Recipes.csv`, foram executadas etapas de filtragem e renomeação das colunas, selecionando informações relevantes para as análises planejadas. Além disso, houve a modificação de certos valores, visando à normalização e padronização dos dados referentes às diferentes regiões associadas às receitas.
@@ -130,6 +132,85 @@ df_with_unit = df_with_unit.dropna()[['Recipe_ID', 'Food_ID', 'Aliased_Ingredien
 
 # Exportação dos dados processados para o formato csv (IngredientOnFood.csv)
 df_with_unit.to_csv('../data/interim/IngredientOnFood.csv', index=False)
+~~~
+
+### Banco de dados em Grafos
+Para realizar a construção do banco de dados em grafos, foi necessário filtrar as colunas das tabelas utilizadas, com o objetivo de reduzir o contingente de memória carregado `Neo4j`.
+Dessa forma, reduzimos as colunas das tabelas `Food` e `Nutrient` (que possuíam vários atributos) para `id` e `name`.
+~~~python
+import pandas as pd
+# Importação das tabelas Food e Nutrient
+df_food = pd.read_csv('../raw/foodb/Food.csv', sep=',', header=0, encoding='UTF-8')
+df_nutrient = pd.read_csv('../raw/foodb/Nutrient.csv', sep=',', header=0, encoding='UTF-8')
+
+# Filtragem das colunas, selecionando os atributos "id" e "name"
+df_food = df_food[['id', 'name']]
+df_nutrient = df_nutrient[['id', 'name']]
+
+# Exportação dos dados para o formato csv (nutrient-graphs.csv e food-graphs.csv)
+df_food.to_csv('food-graphs.csv', index=False)
+df_nutrient.to_csv('nutrient-graphs.csv', index=False)
+~~~
+Assim, criamos um nó do tipo `Food` baseado na tabela `food-graphs.csv`, e definimos o `id` como índice do nó:
+~~~cypher
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/lamevv/projeto/main/project-2-final/data/graphs/food-graphs.csv' AS line
+CREATE (:Food {id: line.id, name: line.name})
+
+CREATE INDEX FOR (f:Food) ON (f.id)
+~~~
+Ao listar os nós, obtivemos a seguinte visualização:
+~~~cypher
+MATCH (n:Food) RETURN n LIMIT 25
+~~~
+![Nós do tipo Food](images/FoodNosGrafos.png)
+
+Criamos um nó do tipo `Nutrient` baseado na tabela `nutrient-graphs.csv`, e definimos o `id` como índice do nó:
+~~~cypher
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/lamevv/projeto/main/project-2-final/data/graphs/nutrient-graphs.csv' AS line
+CREATE (:Nutrient {id: line.id, name: line.name})
+
+CREATE INDEX FOR (n:Nutrient) ON (n.id)
+~~~
+Ao listar os nós, obtivemos a seguinte visualização:
+~~~cypher
+MATCH (n:Nutrient) RETURN n LIMIT 25
+~~~
+![Nós do tipo Nutrient](images/NutrientNosGrafos.png)
+
+
+Criamos um nó do tipo `Recipes` baseado na tabela `Recipes.csv`, e definimos o `id` como índice do nó:
+~~~cypher
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/lamevv/projeto/main/project-2-final/data/interim/Recipes.csv' AS line
+CREATE (:Recipes {id: line.Recipe_ID, name: line.Title, region: line.Region})
+
+CREATE INDEX FOR (r:Recipes) ON (r.id)
+~~~
+Ao listar os nós, obtivemos a seguinte visualização:
+~~~cypher
+MATCH (n:Recipes) RETURN n LIMIT 25
+~~~
+![Nós do tipo Recipes](images/RecipesNosGrafos.png)
+
+Além disso, construímos a relação `Compose` entre os nós dos tipos `Food` e `Nutrient` conforme o modelo lógico apresentado:
+~~~cypher
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/lamevv/projeto/main/project-2-final/data/interim/ProcessedContent.csv' AS line
+MATCH (f:Food {id: line.food_id})
+MATCH (n:Nutrient {id: line.source_id})
+CREATE (n)-[r:Compose {id: line.id}]->(f)
+SET r.orig_content = line.orig_content,
+    r.unit = line.unit,
+    r.quantity_ref = line.quantity_ref
+~~~
+![Relação Compose](images/RelacaoComposeGrafos.png)
+
+E também, construímos a relação Produces entre nós dos tipos Food e Recipes:
+~~~cypher
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/lamevv/projeto/main/project-2-final/data/interim/IngredientOnFood2.csv' AS line
+MATCH (f:Food {id: line.Food_ID})
+MATCH (r:Recipes {id: line.Recipe_ID})
+CREATE (f)-[p:Produces {id: line.id}]->(r)
+SET p.quantity = line.quantity,
+    p.unit = line.unit
 ~~~
 
 ## Evolução do Projeto
