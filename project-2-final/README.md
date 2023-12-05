@@ -56,6 +56,8 @@ título do arquivo/base | link | breve descrição
 `MostFrequentIngredients` | [data/processed/MostFrequentIngredients.csv](https://github.com/lamevv/projeto/blob/main/project-2-final/data/processed/MostFrequentIngredients.csv) | `Exibe a frequência de ocorrência dos alimentos mais comuns em receitas de cada uma das regiões definidas pelo CulinaryDB`
 `RecipeProfile` | [data/processed/RecipeProfile.csv](https://raw.githubusercontent.com/lamevv/projeto/main/project-2-final/data/processed/RecipeProfile.csv) | `Apresenta o perfil de cada receita em termos de macronutrientes (proteínas, carboidratos e gorduras), identificando aquelas que são nutricionalmente equilibradas`
 `RegionalNutricionalProfile` | [data/processed/RegionalNutricionalProfile.csv](https://github.com/lamevv/projeto/blob/main/project-2-final/data/processed/RegionalNutricionalProfile.csv) | `Dispõe o perfil nutricional em termos de macronutrientes (proteínas, carboidratos e gorduras) das regiões definidas pelo CulinaryDB`
+`food-graphs` | [data/graphs/food-graphs.csv](https://github.com/lamevv/projeto/blob/main/project-2-final/data/graphs/food-graphs.csv) | `Dispõe dos campos "id" e "name" da tabela Food. Tem como principal objetivo minimizar o volume de dados na criação do banco de dados em grafos`
+`nutrient-graphs` | [data/graphs/nutrient-graphs.csv](https://github.com/lamevv/projeto/blob/main/project-2-final/data/graphs/nutrient-graphs.csv) | `Dispõe dos campos "id" e "name" da tabela Nutrient. Tem como principal objetivo minimizar o volume de dados na criação do banco de dados em grafos`
 
 > Os arquivos finais do dataset publicado devem ser colocados na pasta `data`, em subpasta `processed`. Outros arquivos serão colocados em subpastas conforme seu papel (externo, interim, raw). A diferença entre externo e raw é que o raw é em formato não adaptado para uso. A pasta `raw` é opcional, pois pode ser substituída pelo link para a base original da seção anterior.
 > Coloque arquivos que não estejam disponíveis online e sejam acessados pelo notebook. Relacionais (usualmente CSV), XML, JSON e CSV ou triplas para grafos.
@@ -286,8 +288,13 @@ SELECT STDDEV(Per_Fat) DSP_Fat, AVG(Per_Fat) AVG_Fat,
 >   * Ao analisar as distribuições de macronutrientes entre diferentes regiões e correlacionar esses dados com informações auxiliares sobre os índices de doenças crônicas em países ou regiões específicas, é possível conduzir uma análise que orienta políticas de saúde pública e diretrizes sobre novas dietas, oferecendo um ponto de partida para intervenções e estratégias de promoção da saúde.
 
 #### Pergunta/Análise 3
-> * Pergunta 3
+> * [Grafos] Qual o perfil nutricional de cada receita baseado na centralidade de alimentos em uma região
 >   
->   * Explicação em linhas gerais de como a base pode ser usada para responder esta pergunta e a sua relevância.
+>   * Seria possível construir uma relação entre nós do tipo Food, em que dois nós conectam quando seus respectivos alimentos aparecem em uma mesma receita de uma mesma região. A partir de tal relação, seria calculado o Degree Centrality do grafo, elencando os alimentos de maior relevância (em termos de conexões) de uma região, o que possibilita a construção de um perfil nutricional da região baseado nos alimentos mais populares.
+
+#### Pergunta/Análise 4
+> * [Grafos] É possível construir uma relação entre o perfil nutricional das regiões?
+>   
+>   * A partir da relação entre nós mencionada na pergunta acima, poderíamos utilizar o conceito de Comunidade, a fim de identificar comunidade de alimentos nos grafos. Assim, seria possível verificar se alguma comunidade representa uma interseção do conjuntos de alimentos de regiões distintas. Tal interseção seria um indício de uma possível relação do perfil nutricional de tais regiões.
 
 > Coloque um link para o arquivo do notebook que executa o conjunto de queries. Ele estará dentro da pasta `notebook`. Se por alguma razão o código não for executável no Jupyter, coloque na pasta `src`. Se as queries forem executadas atraves de uma interface de um SGBD não executável no Jupyter, como o Cypher, apresente na forma de markdown.
